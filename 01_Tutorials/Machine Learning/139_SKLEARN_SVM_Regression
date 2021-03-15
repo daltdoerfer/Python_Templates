@@ -1,0 +1,37 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.metrics import mean_squared_error
+from sklearn.model_selection import train_test_split
+
+boston = datasets.load_boston()
+x, y = boston.data, boston.target
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, random_state=42, test_size=0.3)
+
+# Gradient Boosting für Vergleich später
+from sklearn.ensemble import GradientBoostingRegressor
+
+regr = GradientBoostingRegressor(max_depth=7, n_estimators=100)
+
+regr.fit(x_train, y_train)
+y_pred = regr.predict(x_test)
+
+r2 = regr.score(x_test, y_test)
+mse = mean_squared_error(y_test, y_pred)
+print("R2: ", r2) #R2:  0.9011253081042548
+print("MSE:", mse) #MSE: 7.367459366471077
+
+# SVM für Regression
+from sklearn.svm import SVR
+
+regr = SVR(kernel="poly")
+
+regr.fit(x_train, y_train)
+y_pred = regr.predict(x_test)
+
+r2 = regr.score(x_test, y_test)
+mse = mean_squared_error(y_test, y_pred)
+print("R2: ", r2)
+print("MSE:", mse)
+# Quintessenz: man kann Support Vector machines für die Regression anwenden, aber SVM ist für Regression immer schlechter als die anderen Verfahren
