@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Python_Templates.iml" filepath="$PROJECT_DIR$/.idea/Python_Templates.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Git Projekte/RDEVIL/.idea/Rdevil.iml" filepath="$PROJECT_DIR$/../Git Projekte/RDEVIL/.idea/Rdevil.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Git Projekte/REPTIL/.idea/Reptil.iml" filepath="$PROJECT_DIR$/../Git Projekte/REPTIL/.idea/Reptil.iml" />
     </modules>
   </component>
 </project>

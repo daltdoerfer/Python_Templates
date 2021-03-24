@@ -14,6 +14,8 @@ from PyQt5.QtWidgets import *
 from datetime import datetime
 import os
 
+version = "1.1"
+
 class Ui_MainWindow(QMainWindow):
 
     def setupUi(self, MainWindow):
@@ -137,7 +139,7 @@ class Ui_MainWindow(QMainWindow):
                 # Ausführung der Command Lines zur erzeugung der EXE File
                 # pyuic5 -x filename.ui > filename.py
                 command_1 = fr'start cmd /k cd {dir_path}'
-                command_2 = fr'pyuic5 -x {filename} > {date_time}{filename[:-3]}.py'
+                command_2 = fr'pyuic6 -x {filename} > {date_time}{filename[:-3]}.py'
                 #self.le1.setText(f">> {command_2} ")
                 print(command_2)
                 os.system(command_1)
