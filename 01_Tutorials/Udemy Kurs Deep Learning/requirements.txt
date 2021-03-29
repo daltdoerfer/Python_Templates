@@ -1,0 +1,22 @@
+# TensorFlow Libraries
+tensorflow==2.4.*
+tensorflow-datasets
+tensorflow-addons
+
+# Other Libraries
+scikit-learn
+scipy
+scikit-image
+numpy==1.19.2
+matplotlib
+pandas
+opencv-python
+pyqt5
+
+# Linting/Tooling
+pylint
+flake8
+mypy
+isort
+autopep8
+pre-commit
