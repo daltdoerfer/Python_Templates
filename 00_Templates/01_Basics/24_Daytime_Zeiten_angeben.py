@@ -29,3 +29,5 @@ print("Formatierte Zeit:", currenttime)
 
 print(dir(datetime))
 
+# Kalenderwoche ausgeben
+print (datetime.date.today().isocalendar()[1])
